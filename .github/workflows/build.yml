@@ -60,8 +60,8 @@ jobs:
         id: pack_artifacts
         if: ${{ ( github.event_name == 'push' && github.ref == 'refs/heads/main' ) || github.event.inputs.create_release == 'true' }}
         run: |
-          Rename-Item -Path .\build\bin\Release\sd.exe -NewName sd-cuda12.exe
-          7z a stable-diffusion-${{ env.BRANCH_NAME }}-${{ steps.commit.outputs.short }}-bin-win-cuda12-x64.zip .\build\bin\Release\sd-cuda12.exe
+          Rename-Item -Path .\stable-diffusion.cpp\build\bin\Release\sd.exe -NewName sd-cuda12.exe
+          7z a stable-diffusion-${{ env.BRANCH_NAME }}-${{ steps.commit.outputs.short }}-bin-win-cuda12-x64.zip .\stable-diffusion.cpp\build\bin\Release\sd-cuda12.exe
 
       - name: Upload artifacts
         if: ${{ ( github.event_name == 'push' && github.ref == 'refs/heads/main' ) || github.event.inputs.create_release == 'true' }}
