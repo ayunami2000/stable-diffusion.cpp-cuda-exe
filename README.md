@@ -1,11 +1,3 @@
-# stable-diffusion.cpp-build
+# stable-diffusion.cpp-cuda-exe
 
-
-## Build
-
-```bash
-mkdir build
-cd build
-cmake .. -DCMAKE_BUILD_TYPE=Release 
-cmake --build . --config Release
-```
+builds

@@ -45,7 +45,7 @@ jobs:
       - name: Build
         id: cmake_build
         run: |
-          cd repo
+          cd stable-diffusion.cpp
           mkdir build
           cd build
           cmake .. ${{ matrix.defines }}
