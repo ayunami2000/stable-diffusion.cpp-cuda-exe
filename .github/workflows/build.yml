@@ -48,7 +48,7 @@ jobs:
           cd stable-diffusion.cpp
           mkdir build
           cd build
-          cmake .. ${{ matrix.defines }}
+          cmake .. -DSD_CUBLAS=ON
           cmake --build . --config Release
 
       - name: Get commit hash
